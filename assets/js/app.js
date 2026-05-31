@@ -1,6 +1,6 @@
 var modalPost = document.querySelector('ion-modal');
 
-  function closeModal() {
+  function closeModal('post-{{ id }}') {
     modalPost.dismiss(null, 'cancel');
   }
 
