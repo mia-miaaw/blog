@@ -1,3 +1,7 @@
+  function closeModal() {
+    modalPost.dismiss(null, 'cancel');
+  }
+
 document.addEventListener('DOMContentLoaded', function () {
 
     // License asli (encoded)
