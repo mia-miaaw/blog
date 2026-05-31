@@ -4,13 +4,11 @@ function openPost(modalId) {
     modalPost.present();
   }
 }
+  document.getElementById('close-btn-{{ id }}').addEventListener('click', () => {
+    const modal = document.getElementById('post-{{ id }}');
+    modal.dismiss(null, 'cancel');
+  });
 
-function closeModal(modalId) {
-  const modalClose = document.getElementById(modalId);
-  if (modalClose) {
-    modalClose.dismiss();
-  }
-}
 
 document.addEventListener('DOMContentLoaded', function () {
 
