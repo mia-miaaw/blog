@@ -1,0 +1,11 @@
+<ion-col size="12" size-md="6">
+  <div class="blog-card" onclick="openPost('post-{{ id }}')">
+    <img class="blog-image" src="{{ post.image }}" alt="{{ post.title }}">
+    <div style="padding: 20px;">
+      <div class="blog-category">{{ post.category }}</div>
+      <h2 class="blog-title">{{ post.title }}</h2>
+      <p class="blog-excerpt">{{ post.content | strip_html | truncatewords: 20 }}</p>
+      <div class="blog-meta">{{ post.date | date: "%d %b %Y" }} • {{ post.content | number_of_words | divided_by: 180 | plus: 1 }} min read</div>
+    </div>
+  </div>
+</ion-col>
