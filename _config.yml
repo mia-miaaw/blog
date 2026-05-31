@@ -1,7 +1,7 @@
 title: FEEDS.
 description: "Blog Modern & Flat dengan Ionic v8 + Jekyll"
 url: ""
-baseurl: ""
+baseurl: "/blog"
 
 # Permalinks
 permalink: /blog/:title/
