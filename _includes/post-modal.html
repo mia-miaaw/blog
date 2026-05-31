@@ -1,28 +1,48 @@
-<ion-modal trigger="trigger-post-{{ id }}">
-  <ion-header class="ion-no-border">
-    <ion-toolbar color="white">
-      <ion-buttons slot="start">
-        <ion-button onclick="closeModal('post-{{ id }}')">
-          <ion-icon name="close-outline" slot="icon-only"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-      <ion-title>Artikel</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content color="white">
-    <div class="modal-content-inner">
-      <div class="blog-category">{{ post.category }}</div>
-      <h1 class="modal-title">{{ post.title }}</h1>
-      <div class="blog-meta" style="margin-bottom: 24px;">
-        Diposting pada {{ post.date | date: "%d %b %Y" }}
+<ion-modal trigger="trigger-post-{{ include.id }}">
+  <ng-template>
+    <ion-header class="ion-no-border">
+      <ion-toolbar color="white">
+        <ion-buttons slot="start">
+          <ion-button id="close-modal-{{ include.id }}" aria-label="Tutup modal">
+            <ion-icon name="close-outline" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-title>Artikel</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    
+    <ion-content color="white">
+      <div class="modal-content-inner">
+        <div class="blog-category">{{ include.post.category }}</div>
+        <h1 class="modal-title">{{ include.post.title }}</h1>
+        <div class="blog-meta" style="margin-bottom: 24px;">
+          Diposting pada {{ include.post.date | date: "%d %b %Y" }}
+        </div>
+        
+        <img 
+          style="width: 100%; max-width: 100%; border-radius: 12px; margin-bottom: 24px; display: block;" 
+          src="{{ include.post.image }}" 
+          alt="{{ include.post.title }}"
+          loading="lazy">
+        
+        <div class="article-body">
+          {{ include.post.content }}
+        </div>
       </div>
-      
-      <img style="width: 100%; border-radius: 12px; margin-bottom: 24px;" src="{{ post.image }}" alt="{{ post.title }}">
-      
-      <div class="article-body">
-        {{ post.content }}
-      </div>
-    </div>
-  </ion-content>
+    </ion-content>
+  </ng-template>
 </ion-modal>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const closeBtn = document.getElementById('close-modal-{{ include.id }}');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      const modal = document.querySelector('ion-modal[trigger="trigger-post-{{ include.id }}"]');
+      if (modal) {
+        modal.dismiss();
+      }
+    });
+  }
+});
+</script>
