@@ -1,4 +1,4 @@
-<ion-modal id="post-{{ id }} trigger="trigger-post-{{ id }}"">
+<ion-modal id="post-{{ id }}" trigger="trigger-post-{{ id }}">
   <ion-header class="ion-no-border">
     <ion-toolbar color="white">
       <ion-buttons slot="start">
@@ -12,17 +12,16 @@
   
   <ion-content color="white">
     <div class="modal-content-inner">
-      <div class="blog-category">{{ post.category }}</div>
-      <h1 class="modal-title">{{ post.title }}</h1>
-      <div class="blog-meta" style="margin-bottom: 24px;">
-        Diposting pada {{ post.date | date: "%d %b %Y" }}
-      </div>
-      
-      <img style="width: 100%; border-radius: 12px; margin-bottom: 24px;" src="{{ post.image }}" alt="{{ post.title }}">
-      
       <div class="article-body">
         {{ post.content }}
       </div>
     </div>
   </ion-content>
 </ion-modal>
+
+<script>
+  document.getElementById('close-btn-{{ id }}').addEventListener('click', () => {
+    const modal = document.getElementById('post-{{ id }}');
+    modal.dismiss(null, 'cancel');
+  });
+</script>
