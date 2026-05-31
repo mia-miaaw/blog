@@ -3,15 +3,43 @@
     <ion-title class="brand-title">{{ site.title }}</ion-title>
     <ion-buttons slot="end">
       <ion-button id="btn-chat">
-       <ion-icon slot="icon-only" name="chatbox"></ion-icon>
+        <ion-icon slot="icon-only" name="chatbox"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<ion-alert 
+  id="chat-alert"
+  header="Konfirmasi Chat" 
+  message="Apakah kamu yakin ingin melanjutkan obrolan dengan AI?"
+></ion-alert>
+
 <script>
-document.getElementById('btn-chat').addEventListener('click', function() {
-    if (confirm('Yakin ingin chat dengan AI?')) {
+  const chatAlert = document.getElementById('chat-alert');
+  const btnChat = document.getElementById('btn-chat');
+
+  chatAlert.buttons = [
+    {
+      text: 'Batal',
+      role: 'cancel',
+      cssClass: 'alert-button-cancel',
+      handler: () => {
+        console.log('User membatalkan aksi.');
+      }
+    },
+    {
+      text: 'Yakin',
+      role: 'confirm',
+      cssClass: 'alert-button-confirm',
+      handler: () => {
         window.location.href = 'https://mia-miaaw.github.io';
+      }
     }
+  ];
+
+  // Trigger alert untuk muncul ketika tombol chat diklik
+  btnChat.addEventListener('click', () => {
+    chatAlert.present();
   });
 </script>
