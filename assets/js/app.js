@@ -1,14 +1,14 @@
 function openPost(modalId) {
-  const modal = document.getElementById(modalId);
-  if (modal) {
-    modal.present();
+  const modalPost = document.getElementById(modalId);
+  if (modalPost) {
+    modalPost.present();
   }
 }
 
 function closeModal(modalId) {
-  const modal = document.getElementById(modalId);
-  if (modal) {
-    modal.dismiss();
+  const modalClose = document.getElementById(modalId);
+  if (modalClose) {
+    modalClose.dismiss();
   }
 }
 
