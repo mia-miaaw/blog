@@ -1,15 +1,3 @@
-function openPost(modalId) {
-  const modalPost = document.getElementById(modalId);
-  if (modalPost) {
-    modalPost.present();
-  }
-}
-  document.getElementById('close-btn-{{ id }}').addEventListener('click', () => {
-    const modal = document.getElementById('post-{{ id }}');
-    modal.dismiss(null, 'cancel');
-  });
-
-
 document.addEventListener('DOMContentLoaded', function () {
 
     // License asli (encoded)
