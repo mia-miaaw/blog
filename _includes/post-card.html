@@ -1,5 +1,5 @@
 <ion-col size="12" size-md="6">
-  <div class="blog-card" id="trigger-post-{{ id }}">
+  <div class="blog-card" id="trigger-{{ post.id | slugify }}">
     <img class="blog-image" src="{{ post.image }}" alt="{{ post.title }}">
     <div style="padding: 20px;">
       <div class="blog-category">{{ post.category }}</div>
