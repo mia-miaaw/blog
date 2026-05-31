@@ -1,3 +1,10 @@
+function openPost(modalId) {
+  const modalPost = document.getElementById(modalId);
+  if (modalPost) {
+    modal.present();
+  }
+}
+
 var modal = document.getElementById('post-{{ id }}');
 
   function closeModal('post-{{ id }}') {
