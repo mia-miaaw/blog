@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="grid-container">
+  <ion-grid>
+    <ion-row>
+      {% for post in site.posts %}
+        {% include post-card.html post=post id=forloop.index %}
+      {% endfor %}
+    </ion-row>
+  </ion-grid>
+</div>
+
+{% for post in site.posts %}
+  {% include post-modal.html post=post id=forloop.index %}
+{% endfor %}
