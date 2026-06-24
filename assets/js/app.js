@@ -12,21 +12,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const license = 'aHR0cHM6Ly9taWEtbWlhYXcuZ2l0aHViLmlv';
     const myLicense = atob(license);
 
-    
     let isValid = false;
+
     if (metaLicense) {
-        try {
-            if (atob(metaLicense) === myLicense || metaLicense === myLicense) {
-                isValid = true;
+        if (metaLicense === myLicense || metaLicense === license) {
+            isValid = true;
+        } else {
+            try {
+                if (atob(metaLicense) === myLicense) {
+                    isValid = true;
+                }
+            } catch (e) {
+                isValid = false; 
             }
-        } catch (e) {
-            isValid = false;
         }
     }
 
     if (!isValid) {
         let second = 10;
-
         const lockStyleAndHtml = `
             <style>
                 body { background: #000000b3 !important; overflow: hidden !important; }
@@ -63,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return;
     }
-
 
     if (adImageUrl && adTargetUrl) {
         const adStyleAndHtml = `
@@ -113,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         setTimeout(() => {
             modal.classList.add('show');
-        }, 3000);
+        }, 2000);
 
         closeAdBtn.addEventListener('click', () => modal.classList.remove('show'));
 
