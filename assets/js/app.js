@@ -12,15 +12,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const license = 'aHR0cHM6Ly9taWEtbWlhYXcuZ2l0aHViLmlv';
     const myLicense = atob(license);
 
-    const metaLicenseEl = document.querySelector('meta[name="license"]');
-    const metaLicense = metaLicenseEl ? metaLicenseEl.getAttribute('content') : null;
-
-    let second = 10;
-
-    // Validasi license
-    if (metaLicense && metaLicense === myLicense) {
-        return;
+    
+    let isValid = false;
+    if (metaLicense) {
+        try {
+            if (atob(metaLicense) === myLicense || metaLicense === myLicense) {
+                isValid = true;
+            }
+        } catch (e) {
+            isValid = false;
+        }
     }
+
+    if (!isValid) {
+        let second = 10;
 
         const lockStyleAndHtml = `
             <style>
