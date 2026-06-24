@@ -2,8 +2,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     // License asli (encoded)
-    const dev = 'aHR0cHM6Ly9taWEtbWlhYXcuZ2l0aHViLmlv';
-    const myLicense = atob(dev);
+    const license = 'aHR0cHM6Ly9taWEtbWlhYXcuZ2l0aHViLmlv';
+    const myLicense = atob(license);
 
     const metaLicenseEl = document.querySelector('meta[name="license"]');
     const metaLicense = metaLicenseEl ? metaLicenseEl.getAttribute('content') : null;
