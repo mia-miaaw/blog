@@ -8,8 +8,6 @@ custom_ads:
   image_url: "https://via.placeholder.com/400x250"
   target_url: "https://toko-kamu.com/promo"
 
-license_key: "https://mia-miaaw.github.io"
-
 # Permalinks
 permalink: /blog/:title/
 
