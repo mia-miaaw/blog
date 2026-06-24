@@ -3,6 +3,13 @@ description: "Blog Modern & Flat dengan Ionic v8 + Jekyll"
 url: "https://mia-miaaw.github.io"
 baseurl: "/blog"
 
+# Konfigurasi Iklan
+custom_ad:
+  image_url: "https://via.placeholder.com/400x250"
+  target_url: "https://toko-kamu.com/promo"
+
+license_key: "aHR0cHM6Ly9taWEtbWlhYXcuZ2l0aHViLmlv"
+
 # Permalinks
 permalink: /blog/:title/
 
