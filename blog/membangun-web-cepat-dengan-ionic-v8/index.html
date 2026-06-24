@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="license" content="aHR0cHM6Ly9taWEtbWlhYXcuZ2l0aHViLmlv">
+  <meta name="ad-image" content="https://via.placeholder.com/400x250">
+   <meta name="ad-link" content="https://toko-kamu.com/promo">
+
+
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Membangun Web Cepat dengan Ionic v8 | FEEDS.</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Membangun Web Cepat dengan Ionic v8" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ionic bukan cuma buat mobile app lagi. Sekarang performa core komponennya via CDN udah mantap banget buat web static." />
+<meta name="twitter:description" property="og:description" content="Ionic bukan cuma buat mobile app lagi. Sekarang performa core komponennya via CDN udah mantap banget buat web static." />
+<link rel="canonical" href="https://mia-miaaw.github.io/blog/blog/membangun-web-cepat-dengan-ionic-v8/" />
+<meta property="og:url" content="https://mia-miaaw.github.io/blog/blog/membangun-web-cepat-dengan-ionic-v8/" />
+<meta property="og:site_name" content="FEEDS." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-31T03:00:00+00:00" />
+<meta property="article:modified_time" content="2026-05-31T03:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" />
+<meta name="twitter:title" content="Membangun Web Cepat dengan Ionic v8" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-05-31T03:00:00+00:00","datePublished":"2026-05-31T03:00:00+00:00","description":"Ionic bukan cuma buat mobile app lagi. Sekarang performa core komponennya via CDN udah mantap banget buat web static.","headline":"Membangun Web Cepat dengan Ionic v8","image":"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800","mainEntityOfPage":{"@type":"WebPage","@id":"https://mia-miaaw.github.io/blog/blog/membangun-web-cepat-dengan-ionic-v8/"},"url":"https://mia-miaaw.github.io/blog/blog/membangun-web-cepat-dengan-ionic-v8/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <script type="module" src="/blog/assets/framework/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="/blog/assets/framework/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="/blog/assets/framework/@ionic/core/css/ionic.bundle.css" />
+
+  <link rel="stylesheet" href="/blog/assets/css/style.css">
+</head>
+<body>
+
+  <ion-app>
+    <ion-header class="ion-no-border">
+  <ion-toolbar color="light">
+    <ion-title class="brand-title">FEEDS.</ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="btn-chat">
+        <ion-icon slot="icon-only" name="chatbox"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-alert 
+  id="chat-alert"
+  header="Konfirmasi Chat" 
+  message="Apakah kamu yakin ingin melanjutkan obrolan dengan AI?"
+></ion-alert>
+
+<script>
+  const chatAlert = document.getElementById('chat-alert');
+  const btnChat = document.getElementById('btn-chat');
+
+  chatAlert.buttons = [
+    {
+      text: 'Batal',
+      role: 'cancel',
+      cssClass: 'alert-button-cancel',
+      handler: () => {
+        console.log('User membatalkan aksi.');
+      }
+    },
+    {
+      text: 'Yakin',
+      role: 'confirm',
+      cssClass: 'alert-button-confirm',
+      handler: () => {
+        window.location.href = 'https://mia-miaaw.github.io';
+      }
+    }
+  ];
+
+  // Trigger alert untuk muncul ketika tombol chat diklik
+  btnChat.addEventListener('click', () => {
+    chatAlert.present();
+  });
+</script>
+
+
+    <ion-content color="light">
+      <p>Ionic bukan cuma buat mobile app lagi. Sekarang performa core komponennya via CDN udah mantap banget buat web static.</p>
+
+<p>Dengan arsitektur Web Components, performa komponen v8 ini sangat ringan karena berjalan langsung secara native di browser tanpa <em>overhead</em> framework yang berat.</p>
+
+    </ion-content>
+  </ion-app>
+
+  <script type="module" src="/blog/assets/framework/ionicons@7/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="/blog/assets/framework/ionicons@7/dist/ionicons/ionicons.js"></script>
+  
+  <script src="/blog/assets/js/app.js" defer></script>
+</body>
+</html>

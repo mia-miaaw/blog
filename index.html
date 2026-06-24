@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="license" content="aHR0cHM6Ly9taWEtbWlhYXcuZ2l0aHViLmlv">
+  <meta name="ad-image" content="https://via.placeholder.com/400x250">
+   <meta name="ad-link" content="https://toko-kamu.com/promo">
+
+
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>FEEDS. | Blog Modern &amp; Flat dengan Ionic v8 + Jekyll</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="FEEDS." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Blog Modern &amp; Flat dengan Ionic v8 + Jekyll" />
+<meta name="twitter:description" property="og:description" content="Blog Modern &amp; Flat dengan Ionic v8 + Jekyll" />
+<link rel="canonical" href="https://mia-miaaw.github.io/blog/" />
+<meta property="og:url" content="https://mia-miaaw.github.io/blog/" />
+<meta property="og:site_name" content="FEEDS." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="FEEDS." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Blog Modern &amp; Flat dengan Ionic v8 + Jekyll","headline":"FEEDS.","name":"FEEDS.","url":"https://mia-miaaw.github.io/blog/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <script type="module" src="/blog/assets/framework/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="/blog/assets/framework/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="/blog/assets/framework/@ionic/core/css/ionic.bundle.css" />
+
+  <link rel="stylesheet" href="/blog/assets/css/style.css">
+</head>
+<body>
+
+  <ion-app>
+    <ion-header class="ion-no-border">
+  <ion-toolbar color="light">
+    <ion-title class="brand-title">FEEDS.</ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="btn-chat">
+        <ion-icon slot="icon-only" name="chatbox"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-alert 
+  id="chat-alert"
+  header="Konfirmasi Chat" 
+  message="Apakah kamu yakin ingin melanjutkan obrolan dengan AI?"
+></ion-alert>
+
+<script>
+  const chatAlert = document.getElementById('chat-alert');
+  const btnChat = document.getElementById('btn-chat');
+
+  chatAlert.buttons = [
+    {
+      text: 'Batal',
+      role: 'cancel',
+      cssClass: 'alert-button-cancel',
+      handler: () => {
+        console.log('User membatalkan aksi.');
+      }
+    },
+    {
+      text: 'Yakin',
+      role: 'confirm',
+      cssClass: 'alert-button-confirm',
+      handler: () => {
+        window.location.href = 'https://mia-miaaw.github.io';
+      }
+    }
+  ];
+
+  // Trigger alert untuk muncul ketika tombol chat diklik
+  btnChat.addEventListener('click', () => {
+    chatAlert.present();
+  });
+</script>
+
+
+    <ion-content color="light">
+      <div class="grid-container">
+  <ion-grid>
+    <ion-row>
+      
+        <ion-col size="12" size-md="6">
+  <div class="blog-card" id="trigger-blog-membangun-web-cepat-dengan-ionic-v8">
+    <img class="blog-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" alt="Membangun Web Cepat dengan Ionic v8">
+    <div style="padding: 20px;">
+      <div class="blog-category">Tech</div>
+      <h2 class="blog-title">Membangun Web Cepat dengan Ionic v8</h2>
+      <p class="blog-excerpt">Ionic bukan cuma buat mobile app lagi. Sekarang performa core komponennya via CDN udah mantap banget buat web static. Dengan...</p>
+      <div class="blog-meta">31 May 2026 • 1 min read</div>
+    </div>
+  </div>
+</ion-col>
+
+      
+        <ion-col size="12" size-md="6">
+  <div class="blog-card" id="trigger-blog-kenapa-flat-design-kembali-ngetren">
+    <img class="blog-image" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800" alt="Kenapa Flat Design Kembali Ngetren?">
+    <div style="padding: 20px;">
+      <div class="blog-category">Design</div>
+      <h2 class="blog-title">Kenapa Flat Design Kembali Ngetren?</h2>
+      <p class="blog-excerpt">Flat design menghilangkan elemen dekoratif shadow yang berat dan gradasi berlebihan, membuat loading web jadi lebih ngebut dan ramah di...</p>
+      <div class="blog-meta">30 May 2026 • 1 min read</div>
+    </div>
+  </div>
+</ion-col>
+
+      
+    </ion-row>
+  </ion-grid>
+</div>
+
+
+  <ion-modal id="modal-blog-membangun-web-cepat-dengan-ionic-v8" trigger="trigger-blog-membangun-web-cepat-dengan-ionic-v8">
+  <ion-header class="ion-no-border">
+    <ion-toolbar color="white">
+      <ion-buttons slot="start">
+        <ion-button onclick="document.getElementById('modal-blog-membangun-web-cepat-dengan-ionic-v8').dismiss()" aria-label="Tutup modal">
+          <ion-icon name="close-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Artikel</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content color="white">
+    <div class="modal-content-inner">
+      <div class="blog-category">Tech</div>
+      <h1 class="modal-title">Membangun Web Cepat dengan Ionic v8</h1>
+      <div class="blog-meta" style="margin-bottom: 24px;">
+        Diposting pada 31 May 2026
+      </div>
+
+      <img 
+        style="width: 100%; max-width: 100%; border-radius: 12px; margin-bottom: 24px; display: block;" 
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" 
+        alt="Membangun Web Cepat dengan Ionic v8"
+        loading="lazy">
+
+      <div class="article-body">
+        <p>Ionic bukan cuma buat mobile app lagi. Sekarang performa core komponennya via CDN udah mantap banget buat web static.</p>
+
+<p>Dengan arsitektur Web Components, performa komponen v8 ini sangat ringan karena berjalan langsung secara native di browser tanpa <em>overhead</em> framework yang berat.</p>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-modal>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const closeBtn = document.getElementById('close-modal-');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      const modal = document.querySelector('ion-modal[trigger="trigger-post-"]');
+      if (modal) {
+        modal.dismiss();
+      }
+    });
+  }
+});
+</script>
+
+
+  <ion-modal id="modal-blog-kenapa-flat-design-kembali-ngetren" trigger="trigger-blog-kenapa-flat-design-kembali-ngetren">
+  <ion-header class="ion-no-border">
+    <ion-toolbar color="white">
+      <ion-buttons slot="start">
+        <ion-button onclick="document.getElementById('modal-blog-kenapa-flat-design-kembali-ngetren').dismiss()" aria-label="Tutup modal">
+          <ion-icon name="close-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Artikel</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content color="white">
+    <div class="modal-content-inner">
+      <div class="blog-category">Design</div>
+      <h1 class="modal-title">Kenapa Flat Design Kembali Ngetren?</h1>
+      <div class="blog-meta" style="margin-bottom: 24px;">
+        Diposting pada 30 May 2026
+      </div>
+
+      <img 
+        style="width: 100%; max-width: 100%; border-radius: 12px; margin-bottom: 24px; display: block;" 
+        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800" 
+        alt="Kenapa Flat Design Kembali Ngetren?"
+        loading="lazy">
+
+      <div class="article-body">
+        <p>Flat design menghilangkan elemen dekoratif shadow yang berat dan gradasi berlebihan, membuat loading web jadi lebih ngebut dan ramah di mata user.</p>
+
+<p>Estetika minimalis berfokus penuh pada tipografi yang kuat, tata letak yang bersih, dan penggunaan warna solid yang kontras dan fungsional.</p>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-modal>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const closeBtn = document.getElementById('close-modal-');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      const modal = document.querySelector('ion-modal[trigger="trigger-post-"]');
+      if (modal) {
+        modal.dismiss();
+      }
+    });
+  }
+});
+</script>
+
+
+
+    </ion-content>
+  </ion-app>
+
+  <script type="module" src="/blog/assets/framework/ionicons@7/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="/blog/assets/framework/ionicons@7/dist/ionicons/ionicons.js"></script>
+  
+  <script src="/blog/assets/js/app.js" defer></script>
+</body>
+</html>
