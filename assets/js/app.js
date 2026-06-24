@@ -9,11 +9,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const adLinkEl = document.querySelector('meta[name="ad-link"]');
     const adTargetUrl = adLinkEl ? adLinkEl.getAttribute('content') : '#';
 
-    const defaultLicense = 'aHR0cHM6Ly9taWEtbWlhYXcuZ2l0aHViLmlv';
-    const myLicense = atob(defaultLicense);
+    const license = 'aHR0cHM6Ly9taWEtbWlhYXcuZ2l0aHViLmlv';
+    const myLicense = atob(license);
 
-    if (!metaLicense || metaLicense !== defaultLicense) {
-        let second = 10;
+    const metaLicenseEl = document.querySelector('meta[name="license"]');
+    const metaLicense = metaLicenseEl ? metaLicenseEl.getAttribute('content') : null;
+
+    let second = 10;
+
+    // Validasi license
+    if (metaLicense && metaLicense === myLicense) {
+        return;
+    }
 
         const lockStyleAndHtml = `
             <style>
