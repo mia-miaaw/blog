@@ -6,8 +6,8 @@ license_key: "<%= ENV['license_key'] %>"
 
 # Konfigurasi Iklan
 custom_ads:
-  image_url: "https://s3.cdnppp889.com/uploads/20007/8b6776c5057f964694ed3a97863a9b87.png"
-  target_url: "https://55rpv6.com/s/8EE59156729"
+  image_url: "https://s3.cdnppp789.com/uploads/1003/162ed9ff5afd4975c66ea061ec9516fa.png"
+  target_url: "https://jp6789x2.com/s/BCE151027183"
 
 # Permalinks
 permalink: /blog/:title/
